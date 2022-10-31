@@ -10,16 +10,16 @@ jobs:
   test-ci-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: "16"
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: "16"
 
-      -name: Install Dependencies
-        run: npm install
+    -name: Install Dependencies
+      run: npm install
 
-      - name: Test Lint
-        run: npm run lint
+    - name: Test Lint
+      run: npm run lint
 
-      - name: Test Coverage
-        run: npm run test:coverage
+    - name: Test Coverage
+      run: npm run test:coverage
